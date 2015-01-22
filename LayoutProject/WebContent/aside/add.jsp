@@ -23,24 +23,24 @@
 		background:url(../image/add,update_icon/add,update_cancle.png) no-repeat;
 	}
 	
-	#image_radio_open, #image_radio_comment {
+	#image_check_open, #image_check_comment {
 		border: none;
 	    width: 42px;
 	    height: 42px;
 	    background-size: 42px;
 	    -webkit-appearance: none;
 	}
-	#image_radio_open {
-		background:url(../image/add,update_icon/add,update_unlock.png) left center no-repeat; 
+	#image_check_open {
+		background:url(../image/add,update_icon/add,update_unlock.png) no-repeat; 
 	}
-	#image_radio_open:checked {
-		background:url(../image/add,update_icon/add,update_lock.png) left center no-repeat; 
+	#image_check_open:checked {
+		background:url(../image/add,update_icon/add,update_lock.png) no-repeat; 
 	}
-	#image_radio_comment {
-		background:url(../image/add,update_icon/add,update_cmactive.png) left center no-repeat; 
+	#image_check_comment {
+		background:url(../image/add,update_icon/add,update_cmactive.png) no-repeat; 
 	}
-	#image_radio_comment:checked {
-		background:url(../image/add,update_icon/add,update_cminactive.png) left center no-repeat; 
+	#image_check_comment:checked {
+		background:url(../image/add,update_icon/add,update_cminactive.png) no-repeat; 
 	}
 	
 	#diary_form {
@@ -71,19 +71,15 @@
 	
 	<form action="add.do" method="post" id="diary_form">
 		<div class="form-group">
-			<input type="text" name="diary_date" class="form-control input-lg" value=<%=date%>>
+			<input type="text" name="diary_date" class="form-control input-lg" value=<%=date%> readonly style="background-color:white">
 		</div>
 		<div class="form-group">
 			<textarea class="form-control"></textarea>
 		</div>
 		<div>
 			<div style="float:left">
-				<label class="checkbox-inline">
-					<input type="checkbox" name="diary_isopen" id="image_radio_open"> 
-				</label>
-				<label class="checkbox-inline">
-					<input type="checkbox" name="diary_iscomment" id="image_radio_comment"> 
-				</label>
+					<input type="checkbox" name="diary_isopen" id="image_check_open"> 
+					<input type="checkbox" name="diary_iscomment" id="image_check_comment"> 
 			</div>
 			<div style="float:right">
 				<input type="submit" value="" id="image_button_insert"/>
