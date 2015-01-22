@@ -15,10 +15,12 @@ function adjustStyle(width, height) {
         $('#logo_area').css('margin', '0 auto').css('width', width*0.44).css('max-width', width*0.44);
         $('#logo').css('width', width*0.44);
     	$('#account').css('margin', '0 auto').css('width', width).css('max-width', width);
+    	$('#welcome').css('margin', '0 auto').css('width', width).css('max-width', width);
     } else {
     	$('#logo_area').css('margin', '0 auto').css('width', '154px').css('max-width', '154px');
     	$('#logo').css('width', '154px');
     	$('#account').css('margin', '0 auto').css('width', '350px').css('max-width', '350px');
+    	$('#welcome').css('margin', '0 auto').css('width', '385px').css('max-width', '385px');
     }
     
     if(height < 420) {
