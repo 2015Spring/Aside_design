@@ -24,10 +24,6 @@ function adjustStyle(width, height) {
     if(height < 420) {
     	$('#logo_area').css('margin-top', '20px').css('margin-bottom', '20px');
     } else {
-    	$('#logo_area').css('margin-top', (height-400)/2).css('margin-bottom', '20px');
+    	$('#logo_area').css('margin-top', (height-450)/2).css('margin-bottom', '20px');
     }
-    
-    var marginTop = $('#logo_area').height()+$('#account').height(); 
-    $('logo_area').css('margin-top', marginTop/2);
-    
 }

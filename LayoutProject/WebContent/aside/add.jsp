@@ -6,6 +6,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Aside</title>
+<style>
+	
+</style>
 </head>
 
 <%
@@ -15,20 +18,22 @@
 				+ calendar.get(Calendar.DATE);
 %>
 <body>
-	<a href="#">로고</a><br>
-	<a href="#">새글</a>
-	<a href="#">목록</a>
-	<a href="#">북마크</a>
-	<a href="#">설정</a>
+	<header>
+		<a href="#"><img src="../image/logo.png"></a>
+		<a href="#"><img src="../image/menus/menu_add.png"></a>
+		<a href="#"><img src="../image/menus/menu_mylist.png"></a>
+		<a href="#"><img src="../image/menus/menu_bookmark.png"></a>
+		<a href="#"><img src="../image/menus/menu_setting.png"></a>
+	</header>
 	
 	<hr>
 	
-	<form action="add.do" method="post">
+	<form action="add.do" method="post" id="diary">
 		<input type="text" name="diary_date" value="<%=date%>"/><br>
 		<textarea rows="10" cols="50"></textarea><br>
-		<input type="checkbox" name="diary_isopen"/>공개여부
-		<input type="checkbox" name="diary_iscmt"/>댓글여부
-		<input type="submit" value="저장"/>
+		<input type="checkbox" name="diary_isopen" id="radio_lock"/>공개여부
+		<input type="checkbox" name="diary_iscmt" id="radio_comment"/>댓글여부
+		<input type="submit" value="저장" style="background:url('../image/add,uupdate_icon/add_update_insert.png');"/>
 		<input type="button" value="취소"/>
 	</form>
 </body>
