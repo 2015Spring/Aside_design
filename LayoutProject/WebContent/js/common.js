@@ -1,35 +1,30 @@
 $(window).load(function() {
-	adjustStyle($(this).width());
+	adjustStyle($(this).width(), $(this).height());
 });
 
 
 $(window).resize(function() {
-	adjustStyle($(this).width());
+	adjustStyle($(this).width(), $(this).height());
 });
 
-function adjustStyle(width) {
+function adjustStyle(width, height) {
     width = parseInt(width);
+    height = parseInt(height);
     
     if (width < 350) {
-        $('#logo_area').css('margin', '0 auto')
-        		   .css('width', width*0.44)
-        		   .css('max-width', width*0.44)
-		 		   .css('margin-top', '100px')
-		 		   .css('margin-bottom', '20px');
+        $('#logo_area').css('margin', '0 auto').css('width', width*0.44).css('max-width', width*0.44);
         $('#logo').css('width', width*0.44);
-    	$('#account').css('margin', '0 auto')
-    			 .css('width', width)
-    			 .css('max-width', width);
+    	$('#account').css('margin', '0 auto').css('width', width).css('max-width', width);
     } else {
-    	$('#logo_area').css('margin', '0 auto')
-		 		   .css('width', '154px')
-		 		   .css('max-width', '154px')
-		 		   .css('margin-top', '100px')
-		 		   .css('margin-bottom', '20px');
+    	$('#logo_area').css('margin', '0 auto').css('width', '154px').css('max-width', '154px');
     	$('#logo').css('width', '154px');
-    	$('#account').css('margin', '0 auto')
-    			 .css('width', '350px')
-    			 .css('max-width', '350px');
+    	$('#account').css('margin', '0 auto').css('width', '350px').css('max-width', '350px');
+    }
+    
+    if(height < 420) {
+    	$('#logo_area').css('margin-top', '20px').css('margin-bottom', '20px');
+    } else {
+    	$('#logo_area').css('margin-top', (height-400)/2).css('margin-bottom', '20px');
     }
     
     var marginTop = $('#logo_area').height()+$('#account').height(); 
